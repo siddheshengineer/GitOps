@@ -1,8 +1,12 @@
 FROM python:3.9-alpine
-WORKDIR /opt
 
-COPY . /opt/
-RUN pip install -r /opt/requirements.txt
+# RUN useradd -ms /bin/bash colorME 
+RUN adduser -D -h /home/colorme colorme
+USER colorme
+WORKDIR /home/colorme
+
+COPY . .
+RUN pip install --user -r requirements.txt
 
 EXPOSE 8080
 

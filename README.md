@@ -91,7 +91,7 @@ git push origin main
 
 ---
 
-## 🚀 Access the Application
+##  Access the Application
 After deployment, access the Flask app via:
 ```sh
 kubectl port-forward svc/webapp-service 8080:8080
@@ -101,7 +101,7 @@ Then visit:
 
 ---
 
-## 📌 Useful Commands
+##  Useful Commands
 ```sh
 # Check FluxCD sync status
 flux get all
@@ -112,15 +112,13 @@ kubectl get pods -n default
 # View app logs
 kubectl logs -l app=webapp
 ```
-
-
 ---
 
-## 🙌 Contributing
+##  Contributing
 Contributions are welcome! Feel free to submit a pull request.
 
 ---
 
-## 📞 Support
+##  Support
 If you have any issues, open a GitHub Issue or contact me. 🚀
 
