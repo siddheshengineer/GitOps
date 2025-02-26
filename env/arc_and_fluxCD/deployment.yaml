@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webcolor-deployment
+  namespace: arc-exercise
+  labels:
+    app: webcolor-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webcolor-app
+  template:
+    metadata:
+      labels:
+        app: webcolor-app
+    spec:
+      containers:
+      - name: webcolor-app
+        image: siddheshdevops/color_app:0.0.2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+    
+

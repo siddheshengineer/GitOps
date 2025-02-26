@@ -1,11 +1,15 @@
 FROM python:3.9-alpine
 
 # RUN useradd -ms /bin/bash colorME 
-RUN adduser -D -h /home/colorme colorme
+RUN addgroup -S colorgroup && adduser -S colorme -G colorgroup -h /home/colorme
+
+#switch to non-root user
 USER colorme
 WORKDIR /home/colorme
 
-COPY . .
+# Copy application files and set correct ownership
+COPY --chown=colorme:colorgroup . /home/colorme/
+
 RUN pip install --user -r requirements.txt
 
 EXPOSE 8080
