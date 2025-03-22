@@ -1,7 +1,7 @@
 FROM python:3.9-alpine
 
 # RUN useradd -ms /bin/bash colorME 
-RUN addgroup -S colorgroup && adduser -S colorme -G colorgroup -h /home/colorme
+RUN addgroup -g 4876 -S colorgroup && adduser -u 8754 -S colorme -G colorgroup -h /home/colorme 
 
 #switch to non-root user
 USER colorme

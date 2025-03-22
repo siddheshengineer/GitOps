@@ -15,14 +15,26 @@ spec:
       labels:
         app: webcolor-app
     spec:
+      securityContext:
+        runAsUser: 8754
+        runAsGroup: 4876
       containers:
       - name: webcolor-app
-        image: siddheshdevops/color_app:0.0.2
+        image: siddheshdevops/color_app:0.0.3
         imagePullPolicy: IfNotPresent
+        env:
+        - name: VERSION
+          value: 0.0.3
         ports:
         - containerPort: 8080
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
+          
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+
     
 
