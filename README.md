@@ -8,6 +8,9 @@ This repository follows a **GitOps** workflow to deploy a **Flask-based web appl
 - **CI/CD**: [`GitHub Actions`](https://github.com/features/actions) / [`CircleCI`](https://circleci.com/) for Continuous Integration
 - **Containerization**: [`Docker`](https://www.docker.com/)
 
+## Architecture
+![Architecture](Architecture.png)
+
 ## 📂 Repository Structure
 ```
 📦 gitOps-project
@@ -22,6 +25,9 @@ This repository follows a **GitOps** workflow to deploy a **Flask-based web appl
 │   └── README.md
 └── README.md
 ```
+
+## Planned changes
+- Migrating from GitHub to Azure DevOps
 
 ## 🎯 Goals
 ✅ Automate infrastructure deployment using GitOps principles  
