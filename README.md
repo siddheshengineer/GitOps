@@ -9,7 +9,7 @@ This repository follows a **GitOps** workflow to deploy a **Flask-based web appl
 - **Containerization**: [`Docker`](https://www.docker.com/)
 
 ## Architecture
-![Architecture](Architecture.png)
+![Architecture](./images/Architecture.png)
 
 ## 📂 Repository Structure
 ```
