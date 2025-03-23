@@ -25,6 +25,8 @@ spec:
         env:
         - name: VERSION
           value: 1.0.0
+        - name: APP_COLOR
+          value: darkblue
         ports:
         - containerPort: 8080
         securityContext:
