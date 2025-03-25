@@ -1,1 +1,24 @@
+name: CI Workflow
 
+on: 
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - app/*
+env:
+  APP_COLOR: red
+  ENV VERSION: 1.0.1
+
+jobs:
+  build_app:
+    name: Build docker image
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./app
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4 #checkout the code
+  
