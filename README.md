@@ -14,10 +14,10 @@ This repository follows a **GitOps** workflow to deploy a **Flask-based web appl
 ## 📂 Repository Structure
 ```
 📦 gitOps-project
-├── 📂 manifests        # Kubernetes manifests for FluxCD
-├── 📂 .github/workflows # GitHub Actions CI/CD pipeline
-├── 📂 k3d-setup         # Scripts for k3d cluster setup
-├── 📂 app              # Flask web application source code
+├── 📂 .github/workflows       # GitHub Actions CI/CD pipeline
+├── 📂 env/arc_and_fluxCD      # Kubernetes manifests for FluxCD
+├── 📂 env/cluster_config.yml  # Scripts for k3d cluster setup
+├── 📂 app                     # Flask web application source code
 │   ├── app.py
 │   ├── templates/
 │   ├── requirements.txt
